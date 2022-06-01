@@ -69,6 +69,7 @@ group :development, :test do
   gem 'capybara'
   gem 'simplecov', :require => false, :group => :test
   gem "factory_bot_rails"
+  gem 'annotate'
 end
 
 group :development do
@@ -80,6 +81,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "letter_opener"
+  gem 'foreman'
 end
 
 group :test do
@@ -88,3 +91,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "tailwindcss-rails", "~> 2.0"
+gem 'rack-cors',:require=>'rack/cors'
