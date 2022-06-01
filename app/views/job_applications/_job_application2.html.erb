@@ -11,7 +11,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Company info:</strong>
-    <%= job_application.company_info %>
+    <%= job_application.company_info.html_safe %>
   </p>
 
   <p class="my-5">
@@ -21,7 +21,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Job description:</strong>
-    <%= job_application.job_description %>
+    <%= job_application.job_description.html_safe %>
   </p>
 
   <p class="my-5">
@@ -31,12 +31,12 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Cover letter:</strong>
-    <%= job_application.cover_letter %>
+    <%= job_application.cover_letter.html_safe %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Resume:</strong>
-    <%= job_application.resume %>
+    <%= job_application.resume.html_safe %>
   </p>
 
   <% if action_name != "show" %>
