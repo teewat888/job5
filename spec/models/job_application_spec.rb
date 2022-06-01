@@ -13,6 +13,15 @@
 #  source          :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  user_id         :uuid
+#
+# Indexes
+#
+#  index_job_applications_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (user_id => users.id)
 #
 require 'rails_helper'
 

@@ -3,7 +3,7 @@ class JobApplicationsController < ApplicationController
 
   # GET /job_applications or /job_applications.json
   def index
-    @job_applications = JobApplication.all
+    @job_applications = current_user.job_applications.all
   end
 
   # GET /job_applications/1 or /job_applications/1.json
@@ -21,7 +21,7 @@ class JobApplicationsController < ApplicationController
 
   # POST /job_applications or /job_applications.json
   def create
-    @job_application = JobApplication.new(job_application_params)
+    @job_application = current_user.job_applications.new(job_application_params)
 
     respond_to do |format|
       if @job_application.save
