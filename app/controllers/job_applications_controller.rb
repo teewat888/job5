@@ -3,7 +3,7 @@ class JobApplicationsController < ApplicationController
 
   # GET /job_applications or /job_applications.json
   def index
-    @job_applications = current_user.job_applications.all
+    @job_applications = current_user.job_applications.all.order(:apply_date).page params[:page]
   end
 
   # GET /job_applications/1 or /job_applications/1.json

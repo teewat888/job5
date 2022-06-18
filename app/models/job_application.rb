@@ -26,4 +26,5 @@
 class JobApplication < ApplicationRecord
     belongs_to :user
     validates :apply_date, :company_name, :job_role, presence: :true
+    paginates_per 8
 end
